@@ -1,9 +1,28 @@
 aid: meltano
 name: Meltano
-description: 'Meltano is a company surfaced as a portfolio company of gv and added to the API Evangelist
-  network as a stub for enrichment. Sector: enterprise. This profile is a lead awaiting the enrichment
-  pipeline.'
+description: >-
+  Meltano is an open-source, declarative, code-first data integration engine
+  (ELT+) built on the open Singer standard. It lets data teams extract, load,
+  transform, and test data across 600+ pre-built connectors sourced from Meltano
+  Hub, managing entire pipelines as version-controlled code through the meltano
+  CLI and a declarative meltano.yml project file. Meltano integrates with dbt for
+  transformation and Elementary for data validation, and offers the Meltano
+  Singer SDK for building custom taps and targets. It originated as a GitLab
+  project and is backed by GV. Meltano exposes no public REST/HTTP API; it is a
+  CLI-first DataOps platform.
 url: https://raw.githubusercontent.com/api-evangelist/meltano/refs/heads/main/apis.yml
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://meltano.com/meltano-logo.svg
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
@@ -12,10 +31,17 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
 tags:
 - Company
 - Enterprise
+- Data Integration
+- ELT
+- Data Pipelines
+- Data Engineering
+- Open Source
+- DataOps
+- Singer
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -24,4 +50,45 @@ maintainers:
   email: info@apis.io
 common:
 - type: Website
-  url: http://meltano.com
+  url: https://meltano.com
+- type: DeveloperPortal
+  url: https://docs.meltano.com
+- type: Documentation
+  url: https://docs.meltano.com
+- type: GettingStarted
+  url: https://docs.meltano.com/getting-started
+- type: GitHubOrganization
+  url: https://github.com/meltano
+- type: Blog
+  url: https://meltano.com/blog
+- type: Pricing
+  url: https://meltano.com/pricing
+- type: Support
+  url: https://meltano.com/slack
+- type: TermsOfService
+  url: https://meltano.com/terms-of-service
+- type: PrivacyPolicy
+  url: https://meltano.com/privacy-policy
+- type: ChangeLogLink
+  url: https://github.com/meltano/meltano/releases
+- type: Packages
+  url: packages/meltano-packages.yml
+- type: SDKs
+  url: packages/meltano-packages.yml
+- type: CLI
+  url: cli/meltano-cli.yml
+- type: ChangeLog
+  url: changelog/meltano-changelog.yml
+- type: Lifecycle
+  url: lifecycle/meltano-lifecycle.yml
+- type: Conformance
+  url: conformance/meltano-conformance.yml
+- type: DomainSecurity
+  url: security/meltano-domain-security.yml
+- type: LLMsTxt
+  url: llms/meltano-llms.txt
+x-enrichment:
+  date: '2026-07-20'
+  status: enriched
+  artifacts_added: 6
+  pass: local-v1
