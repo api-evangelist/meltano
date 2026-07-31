@@ -1,0 +1,23 @@
+generated: '2026-07-20'
+method: searched
+source: https://pypi.org/project/meltano/
+packages:
+  - language: python
+    registry: pypi
+    name: meltano
+    version: 4.2.1
+    url: https://pypi.org/project/meltano/
+    install: pipx install meltano
+    summary: "Meltano is your CLI for ELT+: the declarative, code-first data integration engine."
+    official: true
+    repo: https://github.com/meltano/meltano
+  - language: python
+    registry: pypi
+    name: singer-sdk
+    version: 0.54.5
+    url: https://pypi.org/project/singer-sdk/
+    install: pip install singer-sdk
+    summary: "The Meltano Singer SDK — a framework for building Singer taps and targets."
+    official: true
+    repo: https://github.com/meltano/sdk
+    docs: https://sdk.meltano.com/en/latest/

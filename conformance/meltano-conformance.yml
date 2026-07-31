@@ -1,0 +1,21 @@
+generated: '2026-07-20'
+method: derived
+source: https://docs.meltano.com, https://hub.meltano.com
+notes: >-
+  Meltano is a CLI/declarative data-integration engine, not an HTTP API, so
+  web-API standards (OAuth2/OIDC/RFC9457/JSON:API) do not apply. It conforms to
+  the open-source data-integration standards below.
+standards:
+  - id: singer-spec
+    conforms: true
+    evidence: "Meltano runs Singer taps/targets and ships the Singer SDK (singer-sdk); connectors comply with the Singer Spec."
+  - id: dbt
+    conforms: true
+    evidence: "First-class dbt integration for the transform stage."
+  - id: oauth2
+    conforms: false
+  - id: rfc9457-problem-details
+    conforms: false
+  - id: openapi
+    conforms: false
+    evidence: "Meltano exposes no public REST/HTTP API; interaction is via CLI and meltano.yml."

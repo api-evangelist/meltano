@@ -1,0 +1,34 @@
+# Meltano
+
+> Meltano is an open-source, declarative, code-first data integration engine (ELT+) built on the Singer standard. It moves, transforms, and tests data across 600+ pre-built connectors, managed as version-controlled code via a CLI. Backed by GV; originated as a GitLab project.
+
+Meltano is a CLI-first DataOps tool, not an HTTP API. Interaction happens through the `meltano` command-line interface and the declarative `meltano.yml` project file. Custom connectors are built with the Meltano Singer SDK.
+
+## Products
+- [Meltano Open](https://docs.meltano.com/): self-hosted, open-source data integration foundation
+- [Meltano Hub](https://hub.meltano.com/): catalog of 600+ extractors, loaders, and utilities
+- [Meltano SDK](https://sdk.meltano.com/en/latest/): framework for building Singer taps and targets
+
+## Docs
+- [Documentation](https://docs.meltano.com/)
+- [CLI reference](https://docs.meltano.com/reference/command-line-interface)
+- [Getting started](https://docs.meltano.com/getting-started)
+- [Meltano Hub](https://hub.meltano.com/)
+- [SDK docs](https://sdk.meltano.com/en/latest/)
+
+## Packages
+- [meltano (PyPI)](https://pypi.org/project/meltano/) — the Meltano CLI, `pipx install meltano`
+- [singer-sdk (PyPI)](https://pypi.org/project/singer-sdk/) — build custom Singer connectors, `pip install singer-sdk`
+
+## Repos
+- [github.com/meltano/meltano](https://github.com/meltano/meltano)
+- [github.com/meltano/sdk](https://github.com/meltano/sdk)
+- [Releases / changelog](https://github.com/meltano/meltano/releases)
+
+## Company
+- [Homepage](https://meltano.com/)
+- [Blog](https://meltano.com/blog)
+- [Pricing](https://meltano.com/pricing)
+- [Slack community](https://meltano.com/slack)
+- [Terms of Service](https://meltano.com/terms-of-service)
+- [Privacy Policy](https://meltano.com/privacy-policy)

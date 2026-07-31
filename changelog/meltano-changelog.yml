@@ -1,0 +1,34 @@
+generated: '2026-07-20'
+method: searched
+source: https://github.com/meltano/meltano/releases
+scheme: semver
+current_version: 4.2.1
+notes: >-
+  Meltano publishes categorized GitHub Releases (New Features, Fixes, Under the
+  Hood, Performance Improvements, Documentation, Packaging). Multiple release
+  lines (v3.x and v4.x) receive updates concurrently.
+entries:
+  - version: 4.2.1
+    date: '2026-06-16'
+    breaking: false
+    highlights: [Fixed PipelineWise plugin log suppression issue]
+  - version: 3.9.4
+    date: '2026-06-16'
+    breaking: false
+    highlights: [Addressed root logger level configuration for plugin logs]
+  - version: 3.9.3
+    date: '2026-04-13'
+    breaking: false
+    highlights: [Removed upper constraint on uv dependency]
+  - version: 4.2.0
+    date: '2026-04-10'
+    breaking: false
+    highlights: [Restored Docker Hub latest tags, Improved State Backend interface]
+  - version: 4.1.2
+    date: '2026-02-03'
+    breaking: false
+    highlights: [Updated google-cloud-storage and uv dependency requirements]
+  - version: 3.9.2
+    date: '2026-02-03'
+    breaking: false
+    highlights: [Fixed logging levels for smart-open and Alembic, Performance improvements]

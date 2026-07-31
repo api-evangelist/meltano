@@ -1,0 +1,16 @@
+generated: '2026-07-20'
+method: searched
+source: https://github.com/meltano/meltano/releases
+versioning:
+  scheme: semver
+  current: 4.2.1
+  release_lines: [v3.x, v4.x]
+  docs: https://docs.meltano.com/reference/command-line-interface
+deprecation:
+  notes: >-
+    The `elt` CLI command is deprecated in favor of `el` plus `run`. Deprecations
+    are announced in GitHub Release notes; there is no separate formal RFC-8594
+    Sunset/Deprecation HTTP header policy (Meltano is a CLI, not an HTTP API).
+  deprecated_commands: [elt]
+sla: null
+status_page: null

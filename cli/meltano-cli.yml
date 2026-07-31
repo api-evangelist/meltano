@@ -1,0 +1,57 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.meltano.com/reference/command-line-interface
+name: meltano
+description: >-
+  Meltano's command-line interface manages projects, plugins (extractors,
+  loaders, transformers, utilities) sourced from Meltano Hub, and runs EL(T)
+  pipelines as declarative, version-controlled code.
+binary: meltano
+package: packages/meltano-packages.yml
+docs: https://docs.meltano.com/reference/command-line-interface
+install:
+  - method: pipx
+    command: pipx install meltano
+    recommended: true
+  - method: pip
+    command: pip install meltano
+  - method: uv
+    command: uv tool install meltano
+  - method: docker
+    command: docker pull meltano/meltano
+command_groups:
+  - group: project
+    commands:
+      - {name: init, description: Create a new Meltano project at a given directory path}
+      - {name: upgrade, description: Upgrade Meltano and apply database migrations}
+      - {name: version, description: Display the installed Meltano version}
+      - {name: docs, description: Open the Meltano documentation in the default browser}
+      - {name: environment, description: Manage Meltano environments for different configurations}
+      - {name: compile, description: Generate manifest files for environments}
+  - group: plugins
+    commands:
+      - {name: add, description: Add or update plugins in the project from Meltano Hub}
+      - {name: install, description: Install plugin dependencies from meltano.yml}
+      - {name: remove, description: Remove one or more plugins from the project}
+      - {name: invoke, description: Execute a plugin's executable with the given arguments}
+      - {name: config, description: Manage configuration for Meltano or any plugin}
+      - {name: select, description: Add selection patterns to extractors for stream/property filtering}
+      - {name: lock, description: Create lock files for non-custom plugins}
+      - {name: hub, description: Interact with Meltano Hub (e.g. connectivity checks)}
+  - group: pipeline
+    commands:
+      - {name: el, description: Run extract and load using an extractor and loader pair}
+      - {name: elt, description: Run extract, load, and transform (deprecated in favor of run)}
+      - {name: run, description: Run a set of command blocks in series for complex workflows}
+      - {name: job, description: Define sequences of tasks that can be executed or scheduled}
+      - {name: schedule, description: Configure jobs to run at regular intervals via an orchestrator}
+      - {name: state, description: Manage incremental replication state for jobs}
+      - {name: test, description: Run plugin tests (commands whose names start with "test")}
+      - {name: logs, description: View recent job runs and log content}
+key_flows:
+  - name: Bootstrap a project
+    steps: [meltano init my-project, meltano add extractor tap-github, meltano add loader target-postgres, meltano install]
+  - name: Run an EL pipeline
+    steps: [meltano el tap-github target-postgres]
+  - name: Schedule a job
+    steps: [meltano job add nightly --tasks "tap-github target-postgres", meltano schedule add nightly --job nightly --interval "@daily"]
