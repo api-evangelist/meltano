@@ -11,6 +11,17 @@ description: >-
   project and is backed by GV. Meltano exposes no public REST/HTTP API; it is a
   CLI-first DataOps platform.
 url: https://raw.githubusercontent.com/api-evangelist/meltano/refs/heads/main/apis.yml
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: unknown
