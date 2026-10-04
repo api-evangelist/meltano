@@ -50,7 +50,7 @@ tags:
 - ELT
 - Data Pipeline
 - Data Engineering
-- Open-Source
+- Open Source
 - DataOps
 - Singer
 tags_raw:
@@ -63,6 +63,7 @@ tags_raw:
 - Open Source
 - DataOps
 - Singer
+- Open-Source
 apis: []
 maintainers:
 - FN: Kin Lane
