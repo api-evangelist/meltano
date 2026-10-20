@@ -1,5 +1,35 @@
 generated: '2026-10-18'
 edges:
+- partner_name: PyPI
+  partner: pypi
+  partner_match: register
+  type: register
+  direction: provider-built
+  category: official SDK (Python)
+  evidence: https://pypi.org/project/meltano/
+  channel: package-registry
+  relationship: distribution-channel
+  contract_reference:
+    register: PyPI (public registry JSON)
+    spec_file: null
+    language: Python
+    packages:
+    - name: meltano
+      version: 4.4.1
+      released: '2026-10-07'
+      released_field: upload_time
+      lapsed: false
+      page: https://pypi.org/project/meltano/
+      repo_leg: github-org:meltano
+      publisher_leg: email:meltano.com
+      matched_by: domain
+    current: true
+    signal_note: 'an official package on the registry: distribution, not an integration; lapsed = no release in
+      24 months'
+    detected_by: sweep-official-sdks.py
+    detected: '2026-10-18'
+  detected_by: sweep-official-sdks.py
+  first_seen: '2026-10-18'
 - partner_name: ActiveCampaign
   partner: activecampaign
   partner_match: domain
@@ -11051,14 +11081,13 @@ edges:
   partner_match: register
   type: register
   direction: provider-built
-  category: official SDK (Python)
+  category: official CLI (PyPI)
   evidence: https://pypi.org/project/meltano/
   channel: package-registry
   relationship: distribution-channel
   contract_reference:
-    register: PyPI (public registry JSON)
+    register: PyPI (public package index)
     spec_file: null
-    language: Python
     packages:
     - name: meltano
       version: 4.4.1
@@ -11066,16 +11095,17 @@ edges:
       released_field: upload_time
       lapsed: false
       page: https://pypi.org/project/meltano/
+      cli: 'PyPI name/summary: Meltano is your CLI for ELT+: Open Source, Flexible, and Scalable. Move, transfo'
       repo_leg: github-org:meltano
       publisher_leg: email:meltano.com
       matched_by: domain
     current: true
-    signal_note: 'an official package on the registry: distribution, not an integration; lapsed = no release in
-      24 months'
-    detected_by: sweep-official-sdks.py
-    detected: '2026-10-18'
-  detected_by: sweep-official-sdks.py
-  first_seen: '2026-10-18'
+    signal_note: 'the provider''s own command-line tool on a package manager: distribution, not an integration;
+      lapsed = no release in 24 months or deprecated / disabled by the manager'
+    detected_by: sweep-official-clis.py
+    detected: '2026-10-20'
+  detected_by: sweep-official-clis.py
+  first_seen: '2026-10-20'
 marketplace_apps:
 - marketplace: coverage
   channel: provider-built
@@ -11089,7 +11119,12 @@ marketplace_apps:
 method: searched
 checked:
 - https://api.nuget.org/v3
+- https://cdn.winget.microsoft.com/cache
 - https://crates.io/api/v1
+- https://formulae.brew.sh/api/cask.json
+- https://formulae.brew.sh/api/formula.json
+- https://github.com/ScoopInstaller/Extras
+- https://github.com/ScoopInstaller/Main
 - https://github.com/meltano/hub
 - https://proxy.golang.org
 - https://pypi.org/pypi
