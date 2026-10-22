@@ -7880,6 +7880,40 @@ edges:
     builder: 'community (Meltano Hub variant maintainers: z3z1ma)'
   detected_by: sweep-data-integration.py
   first_seen: '2026-10-18'
+- partner_name: Quickbase
+  partner: quickbase
+  partner_match: domain
+  partner_url: https://quickbase.com
+  type: coverage
+  marketplace: coverage
+  channel: provider-built
+  relationship: connector-coverage
+  direction: provider-built
+  evidence: https://hub.meltano.com/extractors/tap-quickbase--flash716
+  contract_reference:
+    register: Meltano Hub (github.com/meltano/hub _data/meltano extractors + loaders)
+    spec_file: null
+    role: elt-connector:meltano-hub
+    registered_name: Quickbase
+    matched_domain: quickbase.com
+    matched_by: domain
+    detected_by: sweep-data-integration.py
+    detected: '2026-10-19'
+    signal_note: one edge per (provider, platform); connectors, streams, packages and usage are context, never read
+    plugins:
+    - tap-quickbase--flash716
+    - tap-quickbase--mainspringenergy
+    - tap-quickbase--singer-io
+    maintenance_status:
+    - active
+    - unknown
+    quality:
+    - bronze
+    - silver
+    - unknown
+    builder: 'community (Meltano Hub variant maintainers: flash716, mainspringenergy, singer-io)'
+  detected_by: sweep-data-integration.py
+  first_seen: '2026-10-19'
 - partner_name: QuickBooks
   partner: quickbooks
   partner_match: domain+name-among-holders
@@ -11113,23 +11147,23 @@ marketplace_apps:
   url: https://hub.meltano.com/
   app_count: 1129
   adapter: sweep-data-integration.py:meltano
-  listed: 359
+  listed: 360
   note: 'Meltano Hub (github.com/meltano/hub _data/meltano extractors + loaders): only domain-linked vendors are
     written'
 method: searched
 checked:
 - https://api.nuget.org/v3
-- https://cdn.winget.microsoft.com/cache
 - https://crates.io/api/v1
-- https://formulae.brew.sh/api/cask.json
-- https://formulae.brew.sh/api/formula.json
-- https://github.com/ScoopInstaller/Extras
-- https://github.com/ScoopInstaller/Main
 - https://github.com/meltano/hub
 - https://proxy.golang.org
 - https://pypi.org/pypi
 - https://registry.npmjs.org
 - https://repo1.maven.org/maven2
 - https://rubygems.org/api/v1
+- https://cdn.winget.microsoft.com/cache
+- https://formulae.brew.sh/api/cask.json
+- https://formulae.brew.sh/api/formula.json
+- https://github.com/ScoopInstaller/Extras
+- https://github.com/ScoopInstaller/Main
 source:
 - https://github.com/meltano/hub
